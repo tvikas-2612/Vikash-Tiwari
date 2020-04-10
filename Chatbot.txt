@@ -1,0 +1,44 @@
+from nltk.chat.util import Chat,reflections
+
+pairs=[
+    ['my name is (.*)',['hi! %1']],
+    ['(hi|holla|heya|hey|hello)',['hey there!how may i help you?']],
+    ['(.*)in(.*)is fun',['%1 in %2 is indeed fun ']],
+    ['(.*) procedure',['I feel glad to inform you!!!In your 4th semester we are do polling in it you have to participate.']],
+    ['(.*) courses',['Well!!Good question. We have five engineering minors courses available in our collage.']],
+    ['(.*) name of the courses',['Courses like-1.Web-Development,2.Data-Science,3.Cyber-Security,4.Machine-Learning,5.Software-Testing']],
+    ['(.*) ranking',['yaa! Every courses have its own values.But now a days Data-Science have high demand in companies.']],
+    ['(.*) prerequisite',['Well! you should know basic of engineering courses which you studied in till 2nd year like DBMS,DATA STRUCTURE and many more']],
+    ['(.*) polling schedule',[' you will know it via ums or lpu touch.anything else i can help with?']],
+    ['ok',['yups, anything else?']],
+    ['yes',['may i know?']],
+    ['sure',['go on..']],
+    ['(.*) path',['sure! ums- login >home>ums navigation>LMS>Engineering Minor Polling']],
+    ['(.*) (do not|did not)',[' score well in rest of examinations and specially in ca,also manage proper attendance.']],
+    ['(.*) backlog',['factors:more than ten percent in mte,more than twenty percent in ete,more then fourty percent overall/subject,umc back']],
+    ['(.*) umc back',['in case you were found disrespecting laws/ rules & regulation of university you are bearer of umc that undefines your  scholarship as well as if serious  you maybe  backed']],
+    ['(.*) come to know our result of polling',['you will recieve lpu touch notification regarding that.']],
+    ['(.*) placement',[' regarding placement you can visit to -respective authorities they will inform you although till your second year you will familiar of these.']],
+    ['no',['thank you,had a great conversation.have a good day ahead!']],
+    ['(.*) thank you',['thank you,had a great conversation.have a good day ahead!']],
+]
+def chatty():
+        print("Hi, I'm Chatty and I chat alot ;)\nPlease type lowercase English language to start a conversation. Type bye to leave ") #default message at the start
+    #giving a general query convo. can be eddited as per requirements.
+    
+
+
+
+
+reflections
+
+my_dummy_reflections={
+    'go':'gone',
+    'hello':'hey there'
+}
+
+chat=Chat(pairs,my_dummy_reflections)
+#chat._substitute(' go hello')
+chat.converse()
+if __name__ == "__main__":
+    chatty()
